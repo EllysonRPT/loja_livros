@@ -11,15 +11,15 @@ import ch.qos.logback.core.model.Model;
 @Controller
 public class indexController {
     @GetMapping("/")
-    public ModelAndView getIndex("index") {
-        ModelAndView mv = new ModelAndView();
+    public ModelAndView getIndex() {
+        ModelAndView mv = new ModelAndView("index");
              return mv ;
     }
     
 
     @GetMapping("/home")
-    public ModelAndView getHome("index") {
-        ModelAndView mv = new ModelAndView();
+    public ModelAndView getHome() {
+        ModelAndView mv = new ModelAndView("index");
              return mv ;
     }
     
