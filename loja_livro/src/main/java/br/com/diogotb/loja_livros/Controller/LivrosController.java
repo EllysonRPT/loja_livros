@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import br.com.diogotb.loja_livros.Repository.LivrosRepository;
 import br.com.diogotb.loja_livros.Model.Livro;
@@ -28,8 +29,10 @@ public class LivrosController {
     }
 
     @PostMapping("/livros")
-    public Livro create(@RequestBody Livro livro) {
-        return this.livrosRepository.save(livro);
+    public ModelAndView create(@RequestBody Livro livro) {
+        ModelAndView mv = new ModelAndView();
+        livrosRepository.save(livro);
+        return mv;
     }
     
 
