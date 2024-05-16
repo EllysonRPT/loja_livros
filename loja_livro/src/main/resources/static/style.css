@@ -1,0 +1,10 @@
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 5vh;
+    background-color: moccasin;
+}
+nav {
+    text-decoration: none;
+}
